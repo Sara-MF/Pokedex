@@ -1,3 +1,4 @@
+import { ApiService } from './../../service/api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  public getPokemons: any;
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.apiListPokemons.subscribe(
+      response => {
+        this.getPokemons = response.results;
+      }
+    );
   }
 
 }
