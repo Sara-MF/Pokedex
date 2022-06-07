@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
+  private setPokemons: any;
   public getPokemons: any;
 
   constructor(private apiService: ApiService) { }
@@ -15,9 +16,18 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.apiListPokemons.subscribe(
       response => {
-        this.getPokemons = response.results;
+        this.setPokemons = response.results;
+        this.getPokemons = this.setPokemons;
       }
     );
+  }
+
+  public getSearch(value: string) {
+    const filter = this.setPokemons.filter( (response: any) => {
+      return !response.name.indexOf(value.toLowerCase());
+    })
+
+    this.getPokemons = filter;
   }
 
 }

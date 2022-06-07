@@ -11,7 +11,7 @@ import { StatusComponent } from './status/status.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'status', component: StatusComponent }
+  { path: 'status/:id', component: StatusComponent }
 ];
 
 @NgModule({
