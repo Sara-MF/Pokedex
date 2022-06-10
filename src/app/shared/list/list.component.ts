@@ -18,6 +18,9 @@ export class ListComponent implements OnInit {
       response => {
         this.setPokemons = response.results;
         this.getPokemons = this.setPokemons;
+      },
+      error => {
+        this.apiError = true;
       }
     );
   }

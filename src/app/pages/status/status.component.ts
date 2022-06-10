@@ -18,6 +18,9 @@ export class StatusComponent implements OnInit {
 
   public pokemon: any;
 
+  public isLoading: boolean = false;
+  public apiError: boolean = false;
+
   constructor(private activatedRoute: ActivatedRoute,
               private apiService: ApiService ) { }
 
@@ -33,6 +36,10 @@ export class StatusComponent implements OnInit {
     return forkJoin([pokemon, name]).subscribe(
       response => {
         this.pokemon = response;
+        this.isLoading = true;
+      },
+      error => {
+        this.apiError = true;
       }
     );
 
