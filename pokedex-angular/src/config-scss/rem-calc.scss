@@ -1,7 +1,0 @@
-// rem = root emphemeral unit
-// 1 rem = 16 px
-// evita distorções ao aumentar a tela
-@function rem-calc($size) {
-  $value: $size / 16;
-  @return #{$value}rem;
-}
