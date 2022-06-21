@@ -7,13 +7,17 @@ import { ChooseComponent } from './choose/choose.component';
 // Routes
 import { HomeRoutingModule } from './home-routing.module';
 
+// Modules
+import { SharedModule } from './../shared/shared.module';
+
 @NgModule({
   declarations: [
     ChooseComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SharedModule
   ]
 })
 export class HomeModule { }

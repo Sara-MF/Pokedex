@@ -1,0 +1,28 @@
+:root {
+
+  --white: #fff;
+
+  --primary-color: #262835;
+  --secondary-color: #FF5473;
+
+  /* types */
+  --fire: #ed534c;
+  --water: #50a7f9;
+  --grass: #83c862;
+  --normal: #b4b3aa;
+  --flying: #719df2;
+  --bug: #b7c64c;
+  --poison: #a5609a;
+  --electric: #f5d460;
+  --ground: #d9c062;
+  --fairy: #e7a5e6;
+  --fighting: #b55f55;
+  --psychic: #ec64a4;
+  --rock: #c0b176;
+  --steel: #b8b7c9;
+  --ice: #88dffb;
+  --ghost: #7776c1;
+  --dragon: #8578f0;
+  --dark: #3e332a;
+
+}

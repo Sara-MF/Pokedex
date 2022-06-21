@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+/* @import './assets/reset.css'; */
+@import './assets/variables.css';
+
+html {
+  background-color: var(--primary-color);
+}
+
+main {
+  width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}

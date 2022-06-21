@@ -6,6 +6,9 @@ import { PokemonsComponent } from './pokemons/pokemons.component';
 import { KantoRoutingModule } from './kanto-routing.module';
 import { InfoComponent } from './info/info.component';
 
+// Modules
+import { SharedModule } from './../shared/shared.module';
+
 @NgModule({
   declarations: [
     PokemonsComponent,
@@ -13,7 +16,8 @@ import { InfoComponent } from './info/info.component';
   ],
   imports: [
     CommonModule,
-    KantoRoutingModule
+    KantoRoutingModule,
+    SharedModule
   ]
 })
 export class KantoModule { }
